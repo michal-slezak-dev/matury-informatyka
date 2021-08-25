@@ -1,0 +1,7 @@
+a) Słów występujących więcej niż 1 raz jest: 21 
+Dominanta to: EBFAABCCBD 
+Dominanta wystąpiła 30 razy. 
+ 
+b) W pliku "dane.txt" sa 483 liczby parzyste 
+ 
+c) Palindromów jest: 20
