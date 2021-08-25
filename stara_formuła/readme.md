@@ -1,1 +1,1 @@
-Są tutaj moje rozwiązania matur z informatyki **z poprzednich lat(stara formuła)**
+Są tutaj moje rozwiązania matur z informatyki **z poprzednich lat(stara formuła)**. W pythonie oczywiście 😄|🐍|💕
