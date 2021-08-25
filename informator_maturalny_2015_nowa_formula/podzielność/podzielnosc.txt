@@ -1,0 +1,11 @@
+Liczb podzielnych przez 2 w pliku liczby1.txt jest: 489
+Liczb podzielnych przez 3 w pliku liczby1.txt jest: 310
+Liczb podzielnych przez 5 w pliku liczby1.txt jest: 186
+
+Liczb podzielnych przez 2 w pliku liczby2.txt jest: 527
+Liczb podzielnych przez 3 w pliku liczby2.txt jest: 331
+Liczb podzielnych przez 5 w pliku liczby2.txt jest: 198
+
+Liczb podzielnych przez 2 w pliku liczby3.txt jest: 521
+Liczb podzielnych przez 3 w pliku liczby3.txt jest: 341
+Liczb podzielnych przez 5 w pliku liczby3.txt jest: 213
