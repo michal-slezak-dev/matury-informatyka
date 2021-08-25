@@ -1,0 +1,4 @@
+a) 422
+b) 500 123
+c) Wiersz dla maksimum: 925
+Wiersz dla minimum: 859
