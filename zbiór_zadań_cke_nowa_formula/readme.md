@@ -1,1 +1,1 @@
-ZBIÓR ZADAŃ 2015
+Są tutaj moje rozwiązania zadań **ze zbioru zadań 2015**. W pythonie oczywiście 😄|🐍|💕
