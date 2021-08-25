@@ -1,0 +1,6 @@
+a) Słów, w których liczba 0 jest większa od liczby jedynek jest: 441
+ b) Słów składających się z 2 niepustych bloków jest: 44 
+ c) Nadjłuższy ciąg ma długość: 10 
+Te słowa to: 
+1001010001000000000011001
+001010000000000
