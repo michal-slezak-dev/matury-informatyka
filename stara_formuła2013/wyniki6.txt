@@ -1,0 +1,7 @@
+a) Liczb zapisanych w sustemie ósemkowym, w których pierwsza cyfra jest równa ostatniej jest: 447
+
+b) Liczb zapisanych w systemie dziesiętnym, w których pierwsza cyfra jest równa ostatniej jest: 324
+
+c) Liczb spełniających warunek jest: 49
+Najwieksza ósemkowa liczba spełniająca warunek: 1133357 , w sysytemie dziesiętnym: 308975 
+Najmniejsza ósemkowa liczba spełniająca warunek: 24 , w sysytemie dziesiętnym: 20
