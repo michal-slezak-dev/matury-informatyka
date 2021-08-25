@@ -1,0 +1,3 @@
+a) Słów kończących się na 'A' jest: 71
+b) Liczba wierszy, gdzie pierwsze słowo zawiera się w drugim: 234
+c) Liczba wierszy zawierających parę słów, gdzie jedno słowo jest anagramem drugiego: 38
