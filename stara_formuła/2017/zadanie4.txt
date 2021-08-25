@@ -1,0 +1,5 @@
+a) Napisów dwucyklicznych jest: 18
+b) Niepoprawnych napisów jest 359
+Najmniejsza długość niepoprawnego napisu to: 4
+c) Największa liczba w systemie dziesiętnym: 54885
+Zapis binarny tej liczby: 1101011001100101
