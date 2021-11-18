@@ -6,35 +6,35 @@ with open("sygnaly.txt", "r", encoding="UTF-8") as file:
 # print(signals)
 
 # Tworzymy słownik, który będzie przechowywać słowo w kluczach i liczbę różnych liter w tym słowie w wartościach
-uniq_words = {}
+unique_words = {}
 
 
 # Dzięki temu, że tworzymy set - to automatycznie odrzuci nam powtórzenia danych liter i długość seta będzie równa liczbie różnych liter
 # Na końcu dodajemy do słownika dane słowo i długość seta
 for signal in signals:
-    uniq_number_of_letters = set()
+    unique_number_of_letters = set()
     for letter in signal:
-        uniq_number_of_letters.add(letter)
+        unique_number_of_letters.add(letter)
 
-    uniq_words.update({signal: len(uniq_number_of_letters)})
-# print(uniq_words)
+    unique_words.update({signal: len(unique_number_of_letters)})
+# print(unique_words)
 
 # Tworzymy zmienną, która przechowuje największą liczbę różnych liter, która pojawiła się w jakimś słowie
-maxNumberOfUniqLetters = max(uniq_words.values())
+maxNumberOfUniqueLetters = max(unique_words.values())
 
 # Tutaj w pętli będziemy sprawdzać czy wartość jest równa największej liczbie różnych liter
 # Jeśli tak to deklarujemy zmienną, do której przypiszemy to słowo i robimy breaka, bo jeśli jest więcej słów o największej liczbie różnych liter
 # to mamy wypisać to pierwsze, więc dlatego robimy break
-for word in uniq_words:
-    if uniq_words[word] == maxNumberOfUniqLetters:
-        wordWithMaxNumberOfUniqLetters = word
+for word in unique_words:
+    if unique_words[word] == maxNumberOfUniqueLetters:
+        wordWithMaxNumberOfUniqueLetters = word
         break
 # print(wordWithMaxNumberOfUniqLetters)
 
-print(f'Słowo o największej liczbie różnych liter to(słowo liczba różnych liter): {wordWithMaxNumberOfUniqLetters}, ma ono {maxNumberOfUniqLetters} różnych liter.')
+print(f'Słowo o największej liczbie różnych liter to(słowo liczba różnych liter): {wordWithMaxNumberOfUniqueLetters}, ma ono {maxNumberOfUniqueLetters} różnych liter.')
 
 # Zapis do pliku
 with open("wyniki4.txt", "a", encoding="UTF-8") as outputFile:
     outputFile.write("\nZadanie 4.2 \n")
     outputFile.write("Słowo o największej liczbie różnych liter oraz liczba różnych liter: \n")
-    outputFile.write(wordWithMaxNumberOfUniqLetters + " " + str(maxNumberOfUniqLetters) + "\n")
+    outputFile.write(wordWithMaxNumberOfUniqueLetters + " " + str(maxNumberOfUniqueLetters) + "\n")
