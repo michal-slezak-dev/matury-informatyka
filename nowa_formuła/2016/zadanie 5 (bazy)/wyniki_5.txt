@@ -1,0 +1,30 @@
+5.1:
+Ta osoba to: KRZYSZTOF LEWANDOWSKI
+
+Tytuły wypożyczonych książek:
+FLASH I PHP
+TEORIA GRAFOW
+JEZYKI PROGRAMOWANIA II
+METODY NUMERYCZNE II
+
+
+5.2:
+średnia liczba osób w pokoju:	4,7101
+
+5.3:
+		liczba
+kobiety:	 138
+mężczyźni:	 192
+
+
+5.4:
+nazwisko	imie
+DYLAG		JACEK
+NAJDA		PIOTR
+PIETRASZEWSKI	STEFAN
+SIECZKOWSKI	MACIEJ
+ZALESKA		JULIA
+
+
+5.5:
+316
