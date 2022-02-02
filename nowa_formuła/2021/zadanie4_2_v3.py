@@ -1,31 +1,38 @@
 with open("instrukcje.txt", "r") as file:
-    only_instructions = []
+    instructions = [line.strip().split()[0] for line in file]
 
-    for line in file:
-        only_instructions.append(line.split()[0])
-
-amount_and_instruction = []
-
-for i in range(1, len(only_instructions)):
-    if only_instructions[i] == only_instructions[i - 1]:
+"""
+Tworzymy listę [instructions_and_num], która przechowuje nam tuple z instrukcją i ilością występujących po sobie
+takich samych instrukcji. Tworzymy też zmienną counter, która będzie nam po prostu zliczała ilość tych samych
+instrukcji występujących po sobie.
+Jeśli kolejna istrukcja jest taka sama to zwiększamy counter o 1, jeśli nie to przypisujemy mu wartość 1, następnie 
+dodajemy krotkę z instrukcją i ilością tych samych instrukcji występujących po sobie do listy [instructions_and_num]
+"""
+instructions_and_num = []
+counter = 1
+for i in range(1, len(instructions)):
+    if instructions[i] == instructions[i - 1]:
         counter += 1
     else:
         counter = 1
-    amount_and_instruction.append([only_instructions[i], counter])
 
-only_amount = []
+    instructions_and_num.append((instructions[i], counter))
 
-for instruction in amount_and_instruction:
-    only_amount.append(instruction[1])
+# ta lista przechowuje tylko liczbę wystąpień tych samych instrukcji po sobie
+only_num_of_occurances = []
+for instruction in instructions_and_num:
+    only_num_of_occurances.append(instruction[1])
 
-maxAmount = max(only_amount)
+# wyłaniamy największą liczbę takich samych instrukcji występujących po sobie
+max_num = max(only_num_of_occurances)
 
-for instruction in amount_and_instruction:
-    if instruction[1] == maxAmount:
-        maxInstruction = instruction[0]
+# wyłaniamy instrukcję, która występowała najwięcej razy po sobie
+for instruction in instructions_and_num:
+    if instruction[1] == max_num:
+        max_instruction = instruction[0]
 
-print(maxInstruction, " ", maxAmount)
+print(f"{max_instruction} {max_num}")
 
-with open("wyniki4.txt", "a", encoding="UTF-8") as output:
-    output.write("\n\n4.2\n")
-    output.write(str(maxInstruction) + " " + str(maxAmount))
+with open("wyniki4.txt", "a", encoding='UTF-8') as out:
+    out.write("\n4.2\n")
+    out.write(f"{max_instruction} {max_num}\n\n")

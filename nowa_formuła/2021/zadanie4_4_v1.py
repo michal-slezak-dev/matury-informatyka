@@ -1,3 +1,9 @@
+# ta funkcja zwraca nam indeks pierwszego wystąpienia danej listery
+def first_occurance(list, target):
+    for i in range(len(list)):
+        if list[i] == target:
+            return i
+
 with open("instrukcje.txt", "r") as file:
     instructions = []
 
@@ -34,10 +40,15 @@ for instruction in instructions:
         if instruction[1] in string_list:
             for letter in string_list:
                 if letter == instruction[1]:
-                    string_list[string_list.index(letter)] = changed_letters[letter]
+                    string_list[first_occurance(string_list, letter)] = changed_letters[letter]
                     break
 
-print("".join(string_list))
+# dodajemy do zmiennej text poszczególne literki z listy
+text = ""
+for letter in string_list:
+    text += letter
+
+print(text)
 with open("wyniki4.txt", "a", encoding="UTF-8") as output:
     output.write("\n4.4\n")
-    output.write("".join(string_list))
+    output.write(text)

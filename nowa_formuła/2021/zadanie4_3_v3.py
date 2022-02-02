@@ -1,8 +1,6 @@
 # ta funkcja zwraca słownik, który w kluczach malitery, a w wartościach liczbę ich wystąpień w liście
 def num_of_occuraces(list):
-    occurances = dict()
-    for letter in list:
-        occurances.update({letter: list.count(letter)})
+    occurances = {letter: list.count(letter) for letter in list}
 
     return occurances
 
@@ -15,10 +13,7 @@ def get_dominant_letter(dict):
             return letter, max_num_of_occurances
 
 with open("instrukcje.txt", "r") as file:
-    instructions = []
-    for line in file:
-        if line.strip().split()[0] == "DOPISZ":
-            instructions.append(line.strip().split()[1])
+    instructions = [line.strip().split()[1] for line in file if line.strip().split()[0] == "DOPISZ"]
 
 # wywołujemy wszyskie potrzebne funkcje, aby otrzymać literę (dominantę) i ilość jej wystąpień
 dominant_letter = get_dominant_letter(num_of_occuraces(instructions))

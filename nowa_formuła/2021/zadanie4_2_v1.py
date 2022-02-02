@@ -1,3 +1,12 @@
+def get_max(array):
+    max_element = array[0]
+
+    for element in array:
+        if element > max_element:
+            max_element = element
+
+    return max_element
+
 with open("instrukcje.txt", "r") as file:
     instructions = []
     for line in file:
@@ -26,7 +35,7 @@ for instruction in instructions_and_num:
     only_num_of_occurances.append(instruction[1])
 
 # wyłaniamy największą liczbę takich samych instrukcji występujących po sobie
-max_num = max(only_num_of_occurances)
+max_num = get_max(only_num_of_occurances)
 
 # wyłaniamy instrukcję, która występowała najwięcej razy po sobie
 for instruction in instructions_and_num:

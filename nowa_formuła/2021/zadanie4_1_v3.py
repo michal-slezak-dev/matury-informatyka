@@ -1,17 +1,13 @@
-with open("instrukcje.txt", "r") as plik:
-    instrukcje = []
+from collections import Counter
 
-    for linia in plik:
-        instrukcje.append(linia.split())
-     
-length = 0
-for instrukcja in instrukcje:
-    if instrukcja[0] == "DOPISZ":
-        length += 1
-    elif instrukcja[0] == "USUN":
-        length -= 1
+with open("instrukcje.txt", "r") as file:
+    instructions = [line.strip().split()[0] for line in file]
+
+# Wystarczy, że policzymy ile jest instrukcji DOPISZ i odejmiemy od tego ilość instrukcji USUN
+length = Counter(instructions)["DOPISZ"] - Counter(instructions)["USUN"]
 
 print(length)
-# with open("wyniki4.txt", "w", encoding="UTF-8") as output:
-#     output.write("4.1\n")
-#     output.write(str(length))
+
+with open("wyniki4.txt", "w", encoding='UTF-8') as out:
+    out.write("4.1\n")
+    out.write(str(length) + "\n")
