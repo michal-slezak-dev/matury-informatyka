@@ -1,13 +1,13 @@
-with open("napisy.txt", "r") as plik:
-    napisy = [linia.strip() for linia in plik]
+with open("napisy.txt", "r") as file:
+    strings = [line.strip() for line in file]
 
-pozycja = 0
-haslo = ""
-for i in range(19, len(napisy), 20):
-    haslo += napisy[i][pozycja]
-    pozycja += 1
+position = 0
+password = ""
+for i in range(19, len(strings), 20):
+    password += strings[i][position]
+    position += 1
 
-print(haslo)
+print(password)
 with open("wyniki4.txt", "a") as out:
     out.write("Zadanie 4.2\n")
-    out.write(f"{haslo}\n\n")
+    out.write(f"{password}\n\n")

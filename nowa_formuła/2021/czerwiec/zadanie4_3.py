@@ -2,46 +2,47 @@ from string import ascii_uppercase, digits
 from collections import deque
 from copy import deepcopy
 
-def czy_palindrom(napis):
-    if napis == napis[::-1]:
+def is_palindrome(string):
+    if string == string[::-1]:
         return True
     return False
 
-def zamiana_na_palindrom(napis, znaki):
-    napis = deque(napis) # to do: sprobowac zrobic tak, ze na jednym napisie operuje a nie na 2 kopiach
+def transform_into_palindrome(string, chars):
+    string = deque(string) # to do: sprobowac zrobic tak, ze na jednym napisie operuje a nie na 2 kopiach
 
-    for znak in znaki:
-        napis_lewo = deepcopy(napis)
-        napis_prawo = deepcopy(napis)
+    for char in chars:
 
-        napis_lewo.appendleft(znak)
-        napis_prawo.append(znak)
+        string_left = deepcopy(string)
+        string_right = deepcopy(string)
 
-        if czy_palindrom("".join(list(napis_lewo))):
-            return "".join(list(napis_lewo))
-        elif czy_palindrom("".join(list(napis_prawo))):
-            return "".join(list(napis_prawo))
-        elif not czy_palindrom("".join(list(napis_lewo))):
-            napis_lewo.popleft()
-        elif not czy_palindrom("".join(list(napis_prawo))):
-            napis_prawo.pop()
+        string_left.appendleft(char)
+        string_right.append(char)
 
-with open("napisy.txt", "r") as plik:
-    napisy = [linia.strip() for linia in plik]
+        if is_palindrome("".join(list(string_left))):
+            return "".join(list(string_left))
+        elif is_palindrome("".join(list(string_right))):
+            return "".join(list(string_right))
+        elif not is_palindrome("".join(list(string_left))):
+            string_left.popleft()
+        elif not is_palindrome("".join(list(string_right))):
+            string_right.pop()
 
-alfabet_i_cyfry = list(ascii_uppercase) + list(digits)
+with open("napisy.txt", "r") as file:
+    strings = [line.strip() for line in file]
 
-palindromy = []
-for napis in napisy:
-    palindromy.append(zamiana_na_palindrom(napis, alfabet_i_cyfry))
+alphabet_and_digits = list(ascii_uppercase) + list(digits)
 
-palindromy = list(filter(lambda x: x != None, palindromy))
+palindromes = []
+for string in strings:
+    palindromes.append(transform_into_palindrome(string, alphabet_and_digits))
 
-haslo = ""
-for palindrom in palindromy:
-    haslo += palindrom[25]
+palindromes = list(filter(lambda x: x is not None, palindromes))
 
-print(haslo)
-# with open("wyniki4.txt", "a") as out:
-#     out.write("Zadanie 4.3\n")
-#     out.write(f"{haslo}\n\n")
+password = ""
+for palindrome in palindromes:
+    password += palindrome[25]
+
+print(password)
+with open("wyniki4.txt", "a") as out:
+    out.write("Zadanie 4.3\n")
+    out.write(f"{password}\n\n")
