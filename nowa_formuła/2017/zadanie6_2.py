@@ -1,22 +1,14 @@
-with open('dane.txt', encoding='UTF-8') as file:
-    pixels = []
-    for line in file:
-        pixels.append(line.split())
+with open("dane.txt", "r") as file:
+    pixels_rows = [list(map(int, line.strip().split())) for line in file]
 
-# p = [1, 2, 3, 4, 4, 3, 2, 1]
-#
-# for i in range(len(p)):
-#     print(f'{i} {len(p) - i - 1}')
-
-how_many = 0
-for line in pixels:
-    for i in range(len(line)):
-        # print(f'Sprawdzam {i} z {len(line) - i}')
-        if line[i] != line[len(line) - i - 1]:
-            how_many += 1
+how_many_to_del = 0
+for row in pixels_rows:
+    for i in range(len(row)):
+        if row[i] != row[len(row) - i - 1]:
+            how_many_to_del += 1
             break
-print(how_many)
+print(f"Najmniejsza liczba wierszy, jaką należy usunąć, aby obraz miał pionową oś symetrii wynosi: {how_many_to_del}")
 
-with open('wyniki6.txt', "a", encoding='UTF-8') as out:
-    out.write("6.2\n")
-    out.write("Liczba takich wierzy wynosi: " + str(how_many) + "\n\n")
+with open("wyniki6.txt", "a", encoding="UTF-8") as out:
+    out.write("Zadanie 6.2\n")
+    out.write(f"Najmniejsza liczba wierszy, jaką należy usunąć, aby obraz miał pionową oś symetrii wynosi: {how_many_to_del}\n\n")

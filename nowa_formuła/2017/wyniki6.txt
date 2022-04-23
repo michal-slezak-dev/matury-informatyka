@@ -1,6 +1,12 @@
-6.1
-Najjaśniejszy piksel to:221
-Najciemniejszy piksel to:7
+Zadanie 6.1
+Najjaśniejszy: 221
+Najciemniejszy: 7
 
-6.2
-Liczba takich wierzy wynosi: 149
+Zadanie 6.2
+Najmniejsza liczba wierszy, jaką należy usunąć, aby obraz miał pionową oś symetrii wynosi: 149
+
+Zadanie 6.3
+Pikselów kontrastujących jest: 753
+
+Zadanie 6.4
+Najdłuższa taka linia pionowa wynosi: 5
