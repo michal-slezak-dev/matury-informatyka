@@ -1,0 +1,13 @@
+ZADANIE 58.1
+Minimum S1: -1011
+Minimum S2: -1001100
+Minimum S3: -1001011
+
+ZADANIE 58.2
+Liczba pomiarów, w których stan pomiaru był jednocześnie niepoprawny we wszystkich stacjach: 182
+
+ZADANIE 58.3
+Liczba dni rekordowych: 42
+
+ZADANIE 58.4
+Największy skok temperatury w stacji S1: 25
