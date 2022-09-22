@@ -1,11 +1,11 @@
-Zadanie 59.1
-Liczb, w których rozkładzie występują dokładnie 3 różne czynniki pierwsze jest: 114
+59.1
+114
 
-Zadanie 59.2
-Ilość liczb, których suma tej liczby i jej liczby odwróconej jest liczbą palindromiczną jest: 181
+59.2
+181
 
-Zadanie 59.3
-Ilość liczb o mocy od 1 do 8: 
+59.3
+Moce: ilość liczb
 1: 381
 2: 344
 3: 171
@@ -14,5 +14,6 @@ Ilość liczb o mocy od 1 do 8:
 6: 4
 7: 0
 8: 2
-Najmniejsza  liczba o mocy 1: 11
-Największa  liczba o mocy 1: 999342708
+
+Maksymalna liczba o mocy 1: 999342708
+Minimalna liczba o mocy 1: 11
